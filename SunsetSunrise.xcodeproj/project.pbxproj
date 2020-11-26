@@ -16,6 +16,7 @@
 		994BB13E2567DFF30001B8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994BB13C2567DFF30001B8D0 /* LaunchScreen.storyboard */; };
 		994BB1472567E0D20001B8D0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1462567E0D20001B8D0 /* NetworkService.swift */; };
 		994BB15A2567E6C90001B8D0 /* SunInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1592567E6C90001B8D0 /* SunInfo.swift */; };
+		99825078257031390089C91B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99825077257031390089C91B /* Constants.swift */; };
 		99A663D125693817009CC2A0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A663D025693817009CC2A0 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		994BB13F2567DFF30001B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		994BB1462567E0D20001B8D0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		994BB1592567E6C90001B8D0 /* SunInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInfo.swift; sourceTree = "<group>"; };
+		99825077257031390089C91B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		99A663D025693817009CC2A0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				994BB1312567DFF10001B8D0 /* AppDelegate.swift */,
 				994BB1332567DFF10001B8D0 /* SceneDelegate.swift */,
 				994BB1352567DFF10001B8D0 /* ViewController.swift */,
+				99825077257031390089C91B /* Constants.swift */,
 				994BB15C2567E6CD0001B8D0 /* Models */,
 				994BB1492567E0D60001B8D0 /* Services */,
 				994BB1372567DFF10001B8D0 /* Main.storyboard */,
@@ -252,6 +255,7 @@
 				994BB1362567DFF10001B8D0 /* ViewController.swift in Sources */,
 				99A663D125693817009CC2A0 /* LocationManager.swift in Sources */,
 				994BB1322567DFF10001B8D0 /* AppDelegate.swift in Sources */,
+				99825078257031390089C91B /* Constants.swift in Sources */,
 				994BB1472567E0D20001B8D0 /* NetworkService.swift in Sources */,
 				994BB1342567DFF10001B8D0 /* SceneDelegate.swift in Sources */,
 			);

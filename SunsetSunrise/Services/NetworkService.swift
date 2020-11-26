@@ -9,44 +9,50 @@ import Foundation
 import Alamofire
 import GooglePlaces
 import GoogleMaps
-import SwiftyJSON
 
+enum LoadError: Error {
+    case noDataAvailable
+    case canNotProcessData
+}
 
 final class NetworkService {
     
-    static var sharedNetworkService: NetworkService = {
-        return NetworkService()
+    let urlresource: URL
+    
+    static let jsonDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
     }()
     
-    static let googlePlacesApiKey: String = "AIzaSyA5xt5YbOp18AGfpAB1CbxNCJm-mkajJP8"
+    init (lat: Double, lon: Double) {
+        let resourceString = "https://api.sunrise-sunset.org/json?lat=\(lat)&lng=\(lon)"
         
-    func loadData(completion: @escaping (SunInfo) -> Void , lat: Double, long: Double) {
-        
-        let apiBaseUrl: String = "https://api.sunrise-sunset.org/json?lat=\(lat)&lng=\(long)"
+        guard let urlresource = URL(string: resourceString) else { fatalError() }
+        self.urlresource = urlresource
+    }
+    
+    //    static var sharedNetworkService: NetworkService = {
+    //        return NetworkService(lat: <#Double#>, lon: <#Double#>)
+    //    }()
+    
+    static func loadData (completion: @escaping(Result<SunInfo, LoadError>) -> Void) {
         
         var sunInfo: SunInfo!
         
-        AF.request(apiBaseUrl).responseJSON { response in
+        AF.request(urlresource).responseJSON { response in
             
-            switch response.result {
-            case .success:
-                
-                guard let json = try? JSON(response.result.get()) else {
-                    fatalError("Cannot get json")
-                }
-                
-                let results = json["results"]
-                
-                let sunrise = results["sunrise"].stringValue
-                let sunset = results["sunset"].stringValue
-                
-                sunInfo = SunInfo(sunrise: sunrise, sunset: sunset)
+            guard let jsonData = response.data else {
+                completion(.failure(.noDataAvailable))
+                return
+            }
             
-                completion(sunInfo)
-            
-            case .failure(_):
-                print("error")
-                completion(sunInfo)
+            do {
+                let weatherResponse = try NetworkService.jsonDecoder.decode(SunInfo.self, from: jsonData)
+                let weatherDetails = weatherResponse
+                completion(.success(weatherDetails))
+            } catch {
+                completion(.failure(.canNotProcessData))
             }
         }
     }

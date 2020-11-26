@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SunInfo {
+struct SunInfo: Decodable {
     
     var sunrise: String
     var sunset: String

@@ -38,7 +38,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //        lat.text = String(describing: self.latitude)
 //        long.text = String(describing: self.longitude)
         
-        NetworkService.sharedNetworkService.loadData(completion: { sunInfo in
+        NetworkService.loadData{[weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let weather):
+                self?.sunInfoVC = weather
+            }
+        }
+        
+        sharedNetworkService.loadData(completion: { sunInfo in
             
             self.sunInfoVC = sunInfo
             
