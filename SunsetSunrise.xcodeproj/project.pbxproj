@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242E960984627AB440CBFCA0 /* Pods_SunsetSunrise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF878B527B89DEFC340F48E /* Pods_SunsetSunrise.framework */; };
 		994BB1322567DFF10001B8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1312567DFF10001B8D0 /* AppDelegate.swift */; };
 		994BB1342567DFF10001B8D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1332567DFF10001B8D0 /* SceneDelegate.swift */; };
 		994BB1362567DFF10001B8D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1352567DFF10001B8D0 /* ViewController.swift */; };
 		994BB1392567DFF10001B8D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994BB1372567DFF10001B8D0 /* Main.storyboard */; };
 		994BB13B2567DFF30001B8D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994BB13A2567DFF30001B8D0 /* Assets.xcassets */; };
 		994BB13E2567DFF30001B8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994BB13C2567DFF30001B8D0 /* LaunchScreen.storyboard */; };
+		994BB1472567E0D20001B8D0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1462567E0D20001B8D0 /* NetworkService.swift */; };
+		994BB15A2567E6C90001B8D0 /* SunInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994BB1592567E6C90001B8D0 /* SunInfo.swift */; };
+		99A663D125693817009CC2A0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A663D025693817009CC2A0 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1267A655F8E5FE71019106EB /* Pods-SunsetSunrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetSunrise.release.xcconfig"; path = "Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise.release.xcconfig"; sourceTree = "<group>"; };
+		3EF878B527B89DEFC340F48E /* Pods_SunsetSunrise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunsetSunrise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74215737F5DED1B038A017A8 /* Pods-SunsetSunrise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetSunrise.debug.xcconfig"; path = "Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise.debug.xcconfig"; sourceTree = "<group>"; };
 		994BB12E2567DFF10001B8D0 /* SunsetSunrise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunsetSunrise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		994BB1312567DFF10001B8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		994BB1332567DFF10001B8D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		994BB13A2567DFF30001B8D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994BB13D2567DFF30001B8D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		994BB13F2567DFF30001B8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		994BB1462567E0D20001B8D0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		994BB1592567E6C90001B8D0 /* SunInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInfo.swift; sourceTree = "<group>"; };
+		99A663D025693817009CC2A0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242E960984627AB440CBFCA0 /* Pods_SunsetSunrise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7367963BA14C5B724243DDB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EF878B527B89DEFC340F48E /* Pods_SunsetSunrise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		994BB1252567DFF10001B8D0 = {
 			isa = PBXGroup;
 			children = (
 				994BB1302567DFF10001B8D0 /* SunsetSunrise */,
 				994BB12F2567DFF10001B8D0 /* Products */,
+				CD3D9C6A4416635B9B3B2651 /* Pods */,
+				7367963BA14C5B724243DDB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +80,40 @@
 				994BB1312567DFF10001B8D0 /* AppDelegate.swift */,
 				994BB1332567DFF10001B8D0 /* SceneDelegate.swift */,
 				994BB1352567DFF10001B8D0 /* ViewController.swift */,
+				994BB15C2567E6CD0001B8D0 /* Models */,
+				994BB1492567E0D60001B8D0 /* Services */,
 				994BB1372567DFF10001B8D0 /* Main.storyboard */,
 				994BB13A2567DFF30001B8D0 /* Assets.xcassets */,
 				994BB13C2567DFF30001B8D0 /* LaunchScreen.storyboard */,
 				994BB13F2567DFF30001B8D0 /* Info.plist */,
 			);
 			path = SunsetSunrise;
+			sourceTree = "<group>";
+		};
+		994BB1492567E0D60001B8D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				994BB1462567E0D20001B8D0 /* NetworkService.swift */,
+				99A663D025693817009CC2A0 /* LocationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		994BB15C2567E6CD0001B8D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				994BB1592567E6C90001B8D0 /* SunInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD3D9C6A4416635B9B3B2651 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74215737F5DED1B038A017A8 /* Pods-SunsetSunrise.debug.xcconfig */,
+				1267A655F8E5FE71019106EB /* Pods-SunsetSunrise.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 994BB1422567DFF30001B8D0 /* Build configuration list for PBXNativeTarget "SunsetSunrise" */;
 			buildPhases = (
+				F8B01E26B14688F534DEFA9E /* [CP] Check Pods Manifest.lock */,
 				994BB12A2567DFF10001B8D0 /* Sources */,
 				994BB12B2567DFF10001B8D0 /* Frameworks */,
 				994BB12C2567DFF10001B8D0 /* Resources */,
+				0ECAD9DF95AFE519A0ADF865 /* [CP] Embed Pods Frameworks */,
+				81865F0B7024E04FCC73D772 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +184,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ECAD9DF95AFE519A0ADF865 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81865F0B7024E04FCC73D772 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B01E26B14688F534DEFA9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunsetSunrise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		994BB12A2567DFF10001B8D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994BB15A2567E6C90001B8D0 /* SunInfo.swift in Sources */,
 				994BB1362567DFF10001B8D0 /* ViewController.swift in Sources */,
+				99A663D125693817009CC2A0 /* LocationManager.swift in Sources */,
 				994BB1322567DFF10001B8D0 /* AppDelegate.swift in Sources */,
+				994BB1472567E0D20001B8D0 /* NetworkService.swift in Sources */,
 				994BB1342567DFF10001B8D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +397,7 @@
 		};
 		994BB1432567DFF30001B8D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74215737F5DED1B038A017A8 /* Pods-SunsetSunrise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +416,7 @@
 		};
 		994BB1442567DFF30001B8D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1267A655F8E5FE71019106EB /* Pods-SunsetSunrise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
